@@ -2,7 +2,7 @@
   let open = false;
 
   let copy =
-    "Hello! My name is Derek and I currently work on apple.com as a front-end engineer. When I'm not coding I am probably investing my time into music, gaming, or fitness.";
+    "Hello! My name is Derek and I currently work on apple.com as a front-end engineer. You can reach me at...";
 
   function openPanels() {
     open = true;
@@ -57,7 +57,7 @@
   .main-background-copy {
     width: 50vh;
     text-align: center;
-    font-family: "SF Mono";
+    font-family: Optima;
     font-weight: 500;
   }
   .main-foreground {
@@ -84,7 +84,7 @@
     z-index: 1;
     margin: 0;
     visibility: visible;
-    transition: visibility 2s;
+    transition: visibility 0.5s;
   }
   .name:hover {
     background: radial-gradient(gray 0%, black 75%);
@@ -93,7 +93,7 @@
       1s ease-in-out gradient-pulse infinite;
   }
   .name.open {
-    animation: fadeout 2s forwards;
+    animation: fadeout 0.5s forwards;
     visibility: hidden;
   }
   .top-panel {
