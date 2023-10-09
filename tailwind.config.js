@@ -14,7 +14,7 @@ export default {
         },
       },
       animation: {
-        fadeout: 'fadeout both',
+        fadeout: 'fadeout 1s both',
       },
     },
   },
