@@ -1,34 +1,12 @@
 <script>
-  // export let copyDataObj:
+  import BorderedLink from './BorderedLink.svelte';
+  export let selected = 'coding';
 </script>
 
-<div class="container">
-  <nav>
-    <a href="../routes/coding">Coding</a>
-    <a href="../routes/music">Music</a>
-    <a href="../routes/gaming">Gaming</a>
+<div class="name:bordered-link absolute left-0 z-10 h-screen w-1/5 pl-10">
+  <nav class="flex h-screen flex-col items-start justify-around">
+    <BorderedLink title={'Coding'} value={'coding'} bind:selected />
+    <BorderedLink title={'Music'} value={'music'} bind:selected />
+    <BorderedLink title={'Gaming'} value={'gaming'} bind:selected />
   </nav>
 </div>
-
-<style>
-  .container {
-    padding-left: 1vw;
-  }
-  nav {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  a {
-    font-family: SF Pro;
-    text-decoration: none;
-  }
-
-  a:hover {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-  }
-</style>

@@ -18,15 +18,19 @@
         closePanels();
       }
     });
+    window.addEventListener('keyup', e => {
+      if (e.key === 'Enter') {
+        openPanels();
+      }
+    });
   });
 </script>
 
 <main>
-  <div class="main-foreground" class:covering={!open}>
+  <div class="main-foreground">
     <div class="top-panel" class:open />
-
     <div
-      class="name-container"
+      class="name-container text-5xl"
       class:open
       on:click={openPanels}
       on:keydown={openPanels}
@@ -57,6 +61,7 @@
     font-family: SF Mono;
     top: 0;
     margin: 0;
+    background: transparent;
   }
   .name-container {
     display: flex;
@@ -67,10 +72,7 @@
     width: 100vw;
     background: transparent;
     color: black;
-    z-index: 1;
     margin: 0;
-    visibility: visible;
-    transition: visibility 0.5s;
   }
   .name-container:hover {
     background: radial-gradient(gray 0%, black 75%);
@@ -80,7 +82,6 @@
   }
   .name-container.open {
     animation: fadeout 0.5s forwards;
-    visibility: hidden;
   }
   .top-panel {
     position: relative;
@@ -88,7 +89,7 @@
     width: 100%;
     border-bottom: solid 2px gray;
     background-color: black;
-    transition: transform 1s ease-in;
+    transition: transform 1s ease-out;
   }
   .top-panel.open {
     transform: translateY(-55vh);
@@ -103,23 +104,18 @@
     width: 100%;
     border-top: solid 2px gray;
     background-color: black;
-    transition: transform 1s ease-in;
+    transition: transform 1s ease-out;
   }
   .bottom-panel.open {
     transform: translateY(55vh);
   }
-  /* .bottom-panel.closing {
-    transform: translateY(-100vh);
-    transition: transform 2s ease-in reverse;
-  } */
+
   .name {
     font-family: Optima;
     font-style: italic;
     font-weight: 400;
   }
-  .covering {
-    z-index: 1;
-  }
+
   /* Animations */
   @keyframes fadeout {
     from {
