@@ -23,11 +23,14 @@
         openPanels();
       }
     });
+    window.addEventListener('click', () => {
+      openPanels();
+    });
   });
 </script>
 
 <main>
-  <div class="main-foreground">
+  <div class="main-foreground" class:z-10={!open}>
     <div class="top-panel" class:open />
     <div
       class={`name-container text-5xl ${
