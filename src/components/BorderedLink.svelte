@@ -18,6 +18,12 @@
     borderedLinkEl?.addEventListener('mouseout', () => {
       hovered = false;
     });
+    borderedLinkEl?.addEventListener('focus', () => {
+      hovered = true;
+    });
+    borderedLinkEl?.addEventListener('blur', () => {
+      hovered = false;
+    });
   });
 </script>
 
@@ -44,7 +50,7 @@
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0) 25%
     );
-    animation: 1s ease-in extend-x forwards;
+    animation: 0.25s ease-in extend-x forwards;
     transform-origin: left;
     text-decoration: bold;
   }
