@@ -30,7 +30,9 @@
   <div class="main-foreground">
     <div class="top-panel" class:open />
     <div
-      class="name-container text-5xl"
+      class={`name-container text-5xl ${
+        !open ? 'animate-fade duration-500 animate-once animate-ease-in' : ''
+      }`}
       class:open
       on:click={openPanels}
       on:keydown={openPanels}
