@@ -46,8 +46,7 @@
       >
         {#if selected === 'coding'}
           <a
-            href="https://www.linkedin.com/in/
-      dereksantolo"
+            href="https://www.linkedin.com/in/dereksantolo"
             target="_blank"
             tabindex="0"
             transition:fade
