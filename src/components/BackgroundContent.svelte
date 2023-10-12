@@ -1,5 +1,9 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition';
   import Nav from './Nav.svelte';
+  import image from '$lib/assets/me.png';
+  import li_logo from '$lib/assets/li-logo.png';
+  import github_logo from '$lib/assets/github_logo.png';
 
   const copyData = {
     coding:
@@ -17,18 +21,57 @@
 </script>
 
 <div
-  class="animate-fade animate-duration-500 animate-once animate-ease-in"
+  class="flex w-screen animate-fade flex-col justify-center animate-duration-500 animate-once animate-ease-in sm:flex-row"
   class:opacity-0={!openedOnce}
   class:animate-none={!openedOnce}
   class:animate-reverse={!open}
 >
   <Nav bind:selected />
-  <div
-    class="flex h-screen flex-col items-center justify-center transition duration-1000"
-  >
-    <div><img alt="Derek" /></div>
-    <p class="w-3/5 p-4 text-center text-gray-800 sm:px-10">
-      {copy}
-    </p>
-  </div>
+  {#key selected}
+    <div
+      class={`flex h-screen w-full animate-fade flex-col items-center justify-center transition duration-1000 animate-duration-500 animate-once animate-ease-in sm:w-3/5 lg:z-0 lg:w-screen`}
+    >
+      <div class="h-34 w-28 flex-grow-0 pb-10">
+        <img
+          class="rounded-xl object-scale-down outline outline-stone-500"
+          alt="Derek"
+          src={image}
+        />
+      </div>
+      <p class="p-4 text-center text-gray-800 sm:p-1 sm:px-10 lg:w-3/5">
+        {copy}
+      </p>
+      <div
+        class="mx-auto flex w-full flex-col items-center justify-around sm:mt-40 sm:flex-row"
+      >
+        {#if selected === 'coding'}
+          <a
+            href="https://www.linkedin.com/in/
+      dereksantolo"
+            target="_blank"
+            tabindex="0"
+            transition:fade
+          >
+            <img
+              class="h-40 w-40 rounded-xl object-scale-down"
+              alt="LinkedIn logo"
+              src={li_logo}
+            />
+          </a>
+          <a
+            href="https://www.github.com/derekdude"
+            target="_blank"
+            tabindex="0"
+            transition:fade
+          >
+            <img
+              class="h-40 w-40 rounded-xl object-scale-down"
+              alt="GitHub logo"
+              src={github_logo}
+            />
+          </a>
+        {/if}
+      </div>
+    </div>
+  {/key}
 </div>
