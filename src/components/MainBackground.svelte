@@ -8,33 +8,10 @@
   }
 </script>
 
-<div class={`main-background h-screen w-screen`}>
+<div
+  class={`name:main-background main-background h-auto w-auto bg-gradient-to-br from-slate-700 from-0% via-gray-300 via-50% to-red-700 to-95% bg-cover dark:from-black dark:via-slate-700 dark:via-10% dark:to-white dark:to-95%`}
+>
   {#key open}
     <BackgroundContent {openedOnce} {open} />
   {/key}
 </div>
-
-<style>
-  .main-background {
-    background: linear-gradient(
-      45deg,
-      silver 0%,
-      gray 25%,
-      silver 75%,
-      red 100%
-    );
-    background-size: 400% 100%;
-    animation: 10s ease gradient-flow infinite;
-  }
-  @keyframes gradient-flow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-</style>
