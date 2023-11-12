@@ -22,7 +22,7 @@
 </script>
 
 <div
-  class="name:background-content flex w-screen animate-fade flex-col justify-center animate-duration-500 animate-once animate-ease-in sm:flex-row"
+  class="name:background-content flex w-screen animate-fade flex-col justify-center animate-duration-1000 animate-once animate-ease-in sm:flex-row"
   class:opacity-0={!openedOnce}
   class:animate-none={!openedOnce}
   class:animate-reverse={!open}
@@ -42,7 +42,7 @@
       <div
         class={`name:lower-content h-1/2 w-full animate-fade flex-col items-center justify-center animate-duration-500 animate-once animate-ease-in sm:max-w-screen-sm`}
       >
-        <p class="text-center text-gray-800">
+        <p class="text-center text-xl text-gray-800">
           {copy}
         </p>
         <div

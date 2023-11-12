@@ -30,47 +30,23 @@
   });
 </script>
 
-<main>
+<main class="grid h-auto w-screen grid-cols-1 grid-rows-1">
+  <MainBackground {open} />
   <div
-    class="main-foreground absolute top-0 m-0 flex h-screen w-screen flex-col items-center justify-center"
-    class:z-10={!open}
+    class="main-foreground top-0 col-span-1 col-start-1 row-span-1 row-start-1 m-0 flex h-screen w-screen flex-col items-center justify-center"
   >
     <div
-      class="top-panel relative h-[55vh] w-screen border-b-2 border-solid border-gray-500 bg-black"
+      class={`top-panel relative h-[47.5vh] w-screen border-b-2 border-solid border-gray-500 bg-black transition-transform ${
+        open ? 'translate-x-[-100vw] duration-1000 ease-linear' : ''
+      }`}
       class:open
     />
     <NameContainer {open} />
     <div
-      class="bottom-panel relative h-[55vh] w-screen border-t-2 border-solid border-gray-500 bg-black"
+      class={`bottom-panel relative h-[47.5vh] w-screen border-t-2 border-solid border-gray-500 bg-black transition-transform ${
+        open ? 'translate-x-[100vw] duration-1000 ease-linear' : ''
+      }`}
       class:open
     />
   </div>
-  <MainBackground {open} />
 </main>
-
-<style>
-  .top-panel {
-    transition: transform 1s ease-out;
-  }
-  .top-panel.open {
-    transform: translateX(-100vw);
-  }
-  .bottom-panel {
-    transition: transform 1s ease-out;
-  }
-  .bottom-panel.open {
-    transform: translateX(100vw);
-  }
-
-  /* Animations */
-  @keyframes fadeout {
-    from {
-      visibility: visible;
-      opacity: 1;
-    }
-    to {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
-</style>
