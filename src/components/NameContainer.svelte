@@ -4,7 +4,7 @@
 
 {#key open}
   <div
-    class={`animate-fade animate-duration-500 animate-ease-in ${
+    class={`animate-fade animate-duration-[250ms] ${
       open ? 'animate-reverse' : ''
     }`}
   >
