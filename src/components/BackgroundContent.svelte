@@ -29,7 +29,7 @@
 >
   <Nav bind:selected />
   <div
-    class={`flex h-auto w-full flex-col items-center justify-center transition duration-1000 lg:z-0 lg:max-w-5xl`}
+    class={`flex h-auto w-full flex-col items-center justify-center transition duration-1000 sm:min-h-[100vh] lg:z-0 lg:max-w-5xl`}
   >
     <div class="flex h-1/2 w-48 flex-col justify-center py-8">
       <img
