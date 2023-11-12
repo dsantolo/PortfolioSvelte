@@ -1,11 +1,16 @@
-<script>
+<script lang="ts">
   import MainBackground from './MainBackground.svelte';
   import { onMount } from 'svelte';
 
   let open = false;
+  let topPanel: HTMLElement;
 
+  // Set state and chain animations for panels opening:
   function openPanels() {
     open = true;
+    setTimeout(() => {
+      topPanel?.classList.remove('z-10');
+    }, 1000);
   }
 
   function closePanels() {
@@ -29,22 +34,25 @@
   });
 </script>
 
-<main>
-  <div class="main-foreground" class:z-10={!open}>
-    <div class="top-panel" class:open />
+<main class="grid h-auto w-screen grid-cols-1 grid-rows-1 overflow-x-hidden">
+  <MainBackground {open} />
+  <div
+    class="main-foreground top-0 col-span-1 col-start-1 row-span-1 row-start-1 m-0 flex h-screen w-screen flex-col items-center justify-center"
+  >
     <div
       class={`name-container text-5xl ${
         !open ? 'animate-fade duration-500 animate-once animate-ease-in' : ''
       }`}
       class:open
-      on:click={openPanels}
-      on:keydown={openPanels}
-      role="button"
-      tabindex="0"
-    >
-      <h1 class="name">Derek Santolo</h1>
-    </div>
-    <div class="bottom-panel" class:open />
+      bind:this={topPanel}
+    />
+    <NameContainer {open} />
+    <div
+      class={`bottom-panel relative h-[47.5vh] w-screen border-t-2 border-solid border-gray-500 bg-black transition-transform ${
+        open ? 'translate-x-[100vw] duration-1000 ease-linear' : ''
+      }`}
+      class:open
+    />
   </div>
   <MainBackground {open} />
 </main>
