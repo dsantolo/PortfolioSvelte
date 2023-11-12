@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: ui-rounded, Comfortaa, 'Hiragino Maru Gothic ProN', Quicksand,
+      Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri,
+      source-sans-pro, sans-serif;
+    font-weight: normal;
+  }
+}
