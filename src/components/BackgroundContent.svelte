@@ -6,7 +6,8 @@
   import github_logo from '$lib/assets/github_logo.png';
 
   const copyData = {
-    home: 'Hello! My name is Derek and I currently work on apple.com as a front-end engineer. You can reach me at...',
+    coding:
+      'Hello! My name is Derek and I currently work on apple.com as a front-end engineer. You can reach me at...',
     music:
       "I'm a lifelong musician who mainly listens to punk and metal music. I currently don't have a way to play drums regularly (looking for one!), but I've taken this as an opportunity to really focus and improve on guitar. Here are some recent covers I've been working on...Coming soon!",
     gaming:
@@ -17,7 +18,7 @@
   export let openedOnce = false;
   export let open = false;
 
-  let selected: keyof typeof copyData = 'home';
+  let selected: keyof typeof copyData = 'coding';
   $: copy = copyData[selected];
 </script>
 
@@ -48,7 +49,7 @@
         <div
           class="mx-auto flex flex-col items-center justify-around sm:mt-40 sm:flex-row"
         >
-          {#if selected === 'home'}
+          {#if selected === 'coding'}
             <a
               href="https://www.linkedin.com/in/dereksantolo"
               target="_blank"

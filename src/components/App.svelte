@@ -35,7 +35,11 @@
   });
 </script>
 
-<main class="grid h-auto w-screen grid-cols-1 grid-rows-1 overflow-x-hidden">
+<main
+  class={`grid h-auto w-screen grid-cols-1 grid-rows-1 overflow-hidden ${
+    open ? '-z-10' : 'max-h-screen md:max-h-none'
+  }`}
+>
   <MainBackground {open} />
   <div
     class="main-foreground top-0 col-span-1 col-start-1 row-span-1 row-start-1 m-0 flex h-screen w-screen flex-col items-center justify-center"

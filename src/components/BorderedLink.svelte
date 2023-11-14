@@ -2,8 +2,8 @@
   import LinkBorder from './LinkBorder.svelte';
 
   export let title = 'Title';
-  export let value = 'home';
-  export let selected = 'home';
+  export let value = 'coding';
+  export let selected = 'coding';
 
   function setSelected(value: string) {
     selected = value;
