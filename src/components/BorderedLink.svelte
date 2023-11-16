@@ -1,4 +1,5 @@
 <script lang="ts">
+  import cn from 'classnames';
   import LinkBorder from './LinkBorder.svelte';
 
   export let title = 'Title';
@@ -17,7 +18,10 @@
 >
   <LinkBorder />
   <span
-    class="font-comfortaa transform self-center py-4 text-xl group-hover:animate-pulse lg:text-3xl"
+    class={cn(
+      'font-comfortaa transform self-center py-4 text-xl group-hover:animate-pulse lg:text-3xl',
+      { 'text-gray-400': selected === value },
+    )}
     >{title}
   </span>
   <LinkBorder />
