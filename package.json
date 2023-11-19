@@ -23,7 +23,7 @@
     "tailwindcss-animated": "^1.0.1",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^4.4.2"
+    "vite": "^5.0.0"
   },
   "type": "module",
   "dependencies": {
