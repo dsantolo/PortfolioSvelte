@@ -10,8 +10,7 @@
       'Hello! My name is Derek and I currently work on apple.com as a front-end engineer. You can reach me at...',
     music:
       "I'm a lifelong musician who mainly listens to punk and metal music. I currently don't have a way to play drums regularly (looking for one!), but I've taken this as an opportunity to really focus and improve on guitar. Here are some recent covers I've been working on...Coming soon!",
-    gaming:
-      'Currently Playing: Lies of P, Spider-Man 2, Alan Wake 2, Counter-Strike 2',
+    gaming: "Currently Playing: Dragon's Dogma 2, Counter-Strike 2",
     blog: 'Blog posts. Coming soon.',
   };
 
