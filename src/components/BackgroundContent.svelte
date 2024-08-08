@@ -7,10 +7,10 @@
 
   const copyData = {
     coding:
-      'Hello! My name is Derek and I currently work on apple.com as a front-end engineer. You can reach me at...',
+      "Hello! I'm Derek, a software engineer who also loves music and gaming. I've most recently worked on apple.com as a frontend engineer. You can reach me at...",
     music:
       "I'm a lifelong musician who mainly listens to punk and metal music. I currently don't have a way to play drums regularly (looking for one!), but I've taken this as an opportunity to really focus and improve on guitar. Here are some recent covers I've been working on...Coming soon!",
-    gaming: "Currently Playing: Dragon's Dogma 2, Counter-Strike 2",
+    gaming: 'Currently Playing: Lies of P (Mac), Counter-Strike 2 (PC)',
     blog: 'Blog posts. Coming soon.',
   };
 
@@ -32,11 +32,7 @@
     class={`flex h-auto w-full flex-col items-center justify-center transition duration-1000 sm:min-h-[100vh] lg:z-0 lg:max-w-5xl`}
   >
     <div class="flex h-1/2 w-48 flex-col justify-center py-8">
-      <img
-        class="rounded-xl object-scale-down outline outline-stone-500"
-        alt="Derek"
-        src={image}
-      />
+      <img class="rounded-xl object-scale-down outline outline-stone-500" alt="Derek" src={image} />
     </div>
     {#key selected}
       <div
@@ -45,9 +41,7 @@
         <p class="text-center text-xl text-gray-800">
           {copy}
         </p>
-        <div
-          class="mx-auto flex flex-col items-center justify-around sm:mt-40 sm:flex-row"
-        >
+        <div class="mx-auto flex flex-col items-center justify-around sm:mt-40 sm:flex-row">
           {#if selected === 'coding'}
             <a
               href="https://www.linkedin.com/in/dereksantolo"
@@ -61,12 +55,7 @@
                 src={li_logo}
               />
             </a>
-            <a
-              href="https://www.github.com/derekdude"
-              target="_blank"
-              tabindex="0"
-              transition:fade
-            >
+            <a href="https://www.github.com/derekdude" target="_blank" tabindex="0" transition:fade>
               <img
                 class="h-40 w-40 rounded-xl object-scale-down"
                 alt="GitHub logo"
