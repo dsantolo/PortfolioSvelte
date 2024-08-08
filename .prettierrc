@@ -1,5 +1,7 @@
 {
-  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
   "singleQuote": true,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "printWidth": 100,
+  "tailwindFunctions": ["clsx", "tw"],
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"]
 }
