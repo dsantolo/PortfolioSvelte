@@ -55,7 +55,7 @@
                 src={li_logo}
               />
             </a>
-            <a href="https://www.github.com/derekdude" target="_blank" tabindex="0" transition:fade>
+            <a href="https://www.github.com/dsantolo" target="_blank" tabindex="0" transition:fade>
               <img
                 class="h-40 w-40 rounded-xl object-scale-down"
                 alt="GitHub logo"
